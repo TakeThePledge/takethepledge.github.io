@@ -62,6 +62,7 @@ body {
     display: flex;
     gap: 1rem;
     text-align: center;
+    align-items: center;
 }
 
 .nav a {
@@ -148,4 +149,10 @@ body {
     text-align: center;
     font-family: "Roboto", sans-serif;
     background-color: rgb(19, 19, 19);
+}
+.list {
+    text-align: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: clamp(1.6vw, 1vw + 2vh, 3rem);
 }
