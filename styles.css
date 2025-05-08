@@ -42,13 +42,13 @@ body {
     background-color: #999999;
     background-size: cover;
     background-position: center;
-    height: 17vh;
     width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 0 2rem; 
+    padding: 0 2rem;
+    flex-wrap: wrap;
 }
 
 .header h1 {
@@ -56,6 +56,7 @@ body {
     font-family: "Inter", sans-serif;
     margin: 0;
     flex: 1;
+    text-align: center;
 }
 
 .nav {
@@ -63,16 +64,19 @@ body {
     gap: 1rem;
     text-align: center;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav a {
     text-decoration: none;
     font-family: "Inter", sans-serif;
     letter-spacing: 0.1px;
-    font-size: clamp(0.8rem, 1vw +0.5vh, 1.2rem);
+    font-size: clamp(0.8rem, 1vw + 0.5vh, 1.2rem);
     padding: 0.5em 1em;
     color: #000000;
     text-align: center;
+    margin: 0.25rem 0;
 }
 
 .main {
@@ -81,8 +85,8 @@ body {
     align-items: center;
     position: relative;
     justify-content: center;
-    align-items: center;
     overflow: hidden;
+    text-align: center;
 }
 
 .main::before {
@@ -118,6 +122,11 @@ body {
     justify-content: center;
 }
 
+.main h1 {
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
 .essay {
     text-align: left;
     font-family: "Times New Roman", Times, serif;
@@ -127,7 +136,7 @@ body {
 
 .optout {
     text-align: center;
-    color:white;
+    color: white;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -140,19 +149,76 @@ body {
     color: inherit;
     text-align: center;
 }
-.main h1{
-    color: white;
-    font-family: "Roboto", sans-serif;
-}
+
 .opting {
-    color:white;
+    color: white;
     text-align: center;
     font-family: "Roboto", sans-serif;
     background-color: rgb(19, 19, 19);
 }
+
 .list {
     text-align: center;
     color: white;
     font-family: "Roboto", sans-serif;
     font-size: clamp(1.6vw, 1vw + 2vh, 3rem);
 }
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .header h1 {
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+
+    .nav a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 2em auto;
+}
+
+.pledge-entry {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.7em 1em;
+    margin-bottom: 1em;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    align-items: center;
+}
+
+.pledge-entry strong {
+    display: block;
+    font-size: 0.8em;
+    margin-bottom: 0.3em;
+    color: #ffffff;
+}
+
+.pledge-entry p {
+    margin: 0;
+    font-size: 0.7em;
+    line-height: 1.5;
+    color: #dddddd;
+}
+
