@@ -7,7 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
           snapshot.forEach(function(childSnapshot) {
               const pledge = childSnapshot.val();
               const listItem = document.createElement('li');
-              listItem.textContent = `Name: ${pledge.fname}. Reason for taking the pledge: ${pledge.reason}`;
+              listItem.classList.add('pledge-entry');
+
+              const name = document.createElement('strong');
+              name.textContent = `Name: ${pledge.fname}`;
+
+              const reason = document.createElement('p');
+              reason.textContent = `Reason for taking the pledge: ${pledge.reason}`;
+
+              listItem.appendChild(name);
+              listItem.appendChild(reason);
               list.appendChild(listItem);
           });
       })
