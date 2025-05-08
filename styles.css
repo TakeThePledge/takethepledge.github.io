@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #000000;
     margin: 0;
@@ -49,13 +59,14 @@ body {
     align-items: center;
     padding: 0 2rem;
     flex-wrap: wrap;
+    overflow-x: hidden;
 }
 
 .header h1 {
     font-size: clamp(1.5rem, 2.6vw + 0.7vh, 3.7rem);
     font-family: "Inter", sans-serif;
     margin: 0;
-    flex: 1;
+    flex: 1 1 100%;
     text-align: center;
 }
 
@@ -66,6 +77,9 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
 }
 
 .nav a {
@@ -77,6 +91,7 @@ body {
     color: #000000;
     text-align: center;
     margin: 0.25rem 0;
+    white-space: nowrap;
 }
 
 .main {
@@ -162,40 +177,13 @@ body {
     color: white;
     font-family: "Roboto", sans-serif;
     font-size: clamp(1.6vw, 1vw + 2vh, 3rem);
-}
-
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        height: auto;
-        padding: 1rem;
-        text-align: center;
-    }
-
-    .nav {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .header h1 {
-        margin: 0.5rem 0;
-        font-size: 1.5rem;
-    }
-
-    .nav a {
-        font-size: 1rem;
-        padding: 0.5rem;
-    }
-}
-
-.list {
     list-style: none;
     padding: 0;
     max-width: 800px;
     margin: 2em auto;
 }
 
+/* Individual pledge entry card */
 .pledge-entry {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 0.7em 1em;
@@ -222,3 +210,28 @@ body {
     color: #dddddd;
 }
 
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .header h1 {
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+
+    .nav a {
+        font-size: 1rem;
+        padding: 0.5rem;
+        white-space: nowrap;
+    }
+}
