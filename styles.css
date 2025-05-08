@@ -72,15 +72,22 @@ body {
 
 .nav {
     display: flex;
-    gap: 1rem;
-    text-align: center;
-    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
+    overflow-x: auto; /* scrolls only if necessary */
+    -webkit-overflow-scrolling: touch;
     padding: 0.5rem 0;
     box-sizing: border-box;
+    scrollbar-width: none; /* Firefox */
 }
+
+.nav::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
 
 .nav a {
     text-decoration: none;
