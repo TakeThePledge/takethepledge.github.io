@@ -47,9 +47,9 @@ function formhandler() {
 
     firebase.database().ref('pledges').push(pledge)
         .then(() => {
-            alert('Thank you for taking the pledge!');
             document.getElementById("form").reset();
             lastSubmissionTime = now; // update last submission timestamp
+            alert('Thank you for taking the pledge!');
         })
         .catch((error) => {
             console.error('Error saving pledge:', error);
