@@ -1,4 +1,4 @@
-function formhandler() {
+function optoutformhandler() {
     var fname2 = document.getElementById("fname2").value;
 
     var optout = {
